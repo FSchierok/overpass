@@ -1,0 +1,64 @@
+\documentclass[
+  bibliography=totoc,     % Literatur im Inhaltsverzeichnis
+  captions=tableheading,  % Tabellenüberschriften
+  titlepage=firstiscover, % Titelseite ist Deckblatt
+]{scrartcl}
+
+\usepackage[a4paper, total={7in, 11in}]{geometry}
+%------------------------------------------------------------------------------
+%------------------------------ Sprache und Schrift: --------------------------
+%------------------------------------------------------------------------------
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}  % -- becomes en-dash etc.
+
+% german language
+\usepackage{polyglossia}
+\setdefaultlanguage{german}
+
+% for english abstract and english titles in the toc
+\setotherlanguages{english}
+
+% intelligent quotation marks, language and nesting sensitive
+\usepackage[autostyle]{csquotes}
+
+% microtypographical features, makes the text look nicer on the small scale
+\usepackage{microtype}
+
+%------------------------------------------------------------------------------
+%-------------------------------- graphics -------------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage{graphicx}
+\usepackage{grffile}
+
+% allow figures to be placed in the running text by default:
+\usepackage{scrhack}
+\usepackage{float}
+\floatplacement{figure}{htbp}
+\floatplacement{table}{htbp}
+
+% keep figures and tables in the section
+\usepackage[section, below]{placeins}
+
+% Hyperlinks im Dokument
+\usepackage[
+  unicode,        % Unicode in PDF-Attributen erlauben
+  pdfusetitle,    % Titel, Autoren und Datum als PDF-Attribute
+  pdfcreator={},  % ┐ PDF-Attribute säubern
+  pdfproducer={}, % ┘
+]{hyperref}
+
+% erweiterte Bookmarks im PDF
+\usepackage{bookmark}
+\usepackage{subcaption}
+
+% Trennung von Wörtern mit Strichen
+\usepackage[shortcuts]{extdash}
+
+% Shortcuts
+\usepackage{expl3}
+\usepackage{xparse}
+
+% Zeileneinzug verhindern
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.3cm}
